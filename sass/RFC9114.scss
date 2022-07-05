@@ -1,0 +1,7 @@
+@import "RFC9114_Variables";
+@import "template";
+
+.sidebar.sidebar-rfc9114 {
+    color: $sidebar_colour;
+    background-color: $sidebar_background_colour;
+}
