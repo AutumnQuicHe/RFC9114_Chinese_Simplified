@@ -11,7 +11,8 @@ Robbie Shade和Mike Warres是《draft-shade-quic-http2-mapping》，也就是本
 
 The IETF QUIC Working Group received an enormous amount of support from many people. Among others, the following people provided substantial contributions to this document:
 
-IETF QUIC工作组接收到了来自许多人员的大量支持。以下人员对本文档做出了重要贡献：
+IETF QUIC工作组接收到了来自许多人员的大量支持。
+以下人员对本文档做出了重要贡献：
 
 * Bence Beky
 

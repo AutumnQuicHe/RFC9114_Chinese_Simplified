@@ -7,7 +7,8 @@ rank: "h2"
 
 QUIC has the same concepts of "stream" and "connection" errors that HTTP/2 provides. However, the differences between HTTP/2 and HTTP/3 mean that error codes are not directly portable between versions.
 
-QUIC和HTTP/2提供的”流“错误与”连接“错误的概念是相同的。然而，HTTP/2与HTTP/3间的差异意味着不同HTTP版本间的错误码不能直接移植。
+QUIC和HTTP/2提供的”流“错误与”连接“错误的概念是相同的。
+然而，HTTP/2与HTTP/3间的差异意味着不同HTTP版本间的错误码不能直接移植。
 
 The HTTP/2 error codes defined in Section 7 of [HTTP/2] logically map to the HTTP/3 error codes as follows:
 
@@ -25,7 +26,8 @@ This is mapped to H3_GENERAL_PROTOCOL_ERROR except in cases where more specific 
 
 `PROTOCOL_ERROR`（值为`0x01`）：
 
-:   除非是存在更准确的错误码的情况，否则可以映射为`H3_GENERAL_PROTOCOL_ERROR`。这些情况包括[第8.1章]()中定义的`H3_FRAME_UNEXPECTED`、`H3_MESSAGE_ERROR`和`H3_CLOSED_CRITICAL_STREAM`。
+:   除非是存在更准确的错误码的情况，否则可以映射为`H3_GENERAL_PROTOCOL_ERROR`。
+这些情况包括[第8.1章]()中定义的`H3_FRAME_UNEXPECTED`、`H3_MESSAGE_ERROR`和`H3_CLOSED_CRITICAL_STREAM`。
 
 INTERNAL_ERROR (0x02):
 H3_INTERNAL_ERROR in Section 8.1.
@@ -67,7 +69,8 @@ H3_REQUEST_REJECTED (in Section 8.1) is used to indicate that a request was not 
 
 `REFUSED_STREAM`（值为`0x07`）：
 
-:   `H3_REQUEST_REJECTED`（[第8.1章]()）被用于表明请求未得到处理的情况。否则，它不适用于HTTP/3，因为QUIC处理了流的管理。
+:   `H3_REQUEST_REJECTED`（[第8.1章]()）被用于表明请求未得到处理的情况。
+否则，它不适用于HTTP/3，因为QUIC处理了流的管理。
 
 CANCEL (0x08):
 H3_REQUEST_CANCELLED in Section 8.1.
@@ -113,4 +116,5 @@ H3_VERSION_FALLBACK in Section 8.1.
 
 Error codes need to be defined for HTTP/2 and HTTP/3 separately. See Section 11.2.3.
 
-应该为HTTP/2和HTTP/3单独定义错误码。详见[第11.2.3章]()。
+应该为HTTP/2和HTTP/3单独定义错误码。
+详见[第11.2.3章]()。

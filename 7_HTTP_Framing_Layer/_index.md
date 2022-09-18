@@ -7,7 +7,10 @@ rank: "h1"
 
 HTTP frames are carried on QUIC streams, as described in Section 6. HTTP/3 defines three stream types: control stream, request stream, and push stream. This section describes HTTP/3 frame formats and their permitted stream types; see Table 1 for an overview. A comparison between HTTP/2 and HTTP/3 frames is provided in Appendix A.2.
 
-HTTP帧是使用QUIC流来传递的，详见[第6章]()。HTTP/3定义了三种流类型：控制流、请求流和推送流。本章描述了各种HTTP/3帧的结构以及在哪种流中可以使用它们：[表1]()对此做了概述。[附录A.2]()是一份针对HTTP/2和HTTP/3的更加详细的比较。
+HTTP帧是使用QUIC流来传递的，详见[第6章]()。
+HTTP/3定义了三种流类型：控制流、请求流和推送流。
+本章描述了各种HTTP/3帧的结构以及在哪种流中可以使用它们：[表1]()对此做了概述。
+[附录A.2]()是一份针对HTTP/2和HTTP/3的更加详细的比较。
 
 Table 1: HTTP/3 Frames and Stream Type Overview
 Frame	Control Stream	Request Stream	Push Stream	Section
@@ -39,7 +42,8 @@ title="表1：HTTP/3帧与流类型的概述" %}}
 
 The SETTINGS frame can only occur as the first frame of a Control stream; this is indicated in Table 1 with a (1). Specific guidance is provided in the relevant section.
 
-**设置帧**只能作为一条控制流的首个帧出现；这一点在[表1]()中使用”（1）“来表示。有关如何使用各个类型的帧，详见各自的章节。
+**设置帧**只能作为一条控制流的首个帧出现；这一点在[表1]()中使用”（1）“来表示。
+有关如何使用各个类型的帧，详见各自的章节。
 
 Note that, unlike QUIC frames, HTTP/3 frames can span multiple packets.
 
