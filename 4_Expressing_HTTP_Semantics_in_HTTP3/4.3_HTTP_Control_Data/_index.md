@@ -20,7 +20,7 @@ Pseudo-header fields are only valid in the context in which they are defined. Ps
 
 伪标头字段仅在定义了它们的上下文中有效。
 定义于请求中的伪标头字段**必须不**出现在响应中；定义于响应中的伪标头字段**必须不**出现在请求中。
-伪标头字段**必须不**出现在尾部。
+伪标头字段**必须不**出现在挂载。
 终端**必须**将包含未定义的或不合法的伪标头字段的请求或响应视作为畸形的。
 
 All pseudo-header fields MUST appear in the header section before regular header fields. Any request or response that contains a pseudo-header field that appears in a header section after a regular header field MUST be treated as malformed.

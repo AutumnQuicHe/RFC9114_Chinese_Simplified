@@ -36,11 +36,11 @@ An HTTP message (request or response) consists of:
 
 3. optionally, the trailer section, if present, sent as a single HEADERS frame.
 
-3. 可选的尾部，它是用单个**标头帧**来发送的（如果存在尾部的话）。
+3. 可选的挂载，它是用单个**标头帧**来发送的（如果存在挂载的话）。
 
 Header and trailer sections are described in Sections 6.3 and 6.5 of [HTTP]; the content is described in Section 6.4 of [HTTP].
 
-《[HTTP]()》的[第6.3章]()和[第6.5章]()描述了头部和尾部；《[HTTP]()》的[第6.4章]()描述了内容。
+《[HTTP]()》的[第6.3章]()和[第6.5章]()描述了头部和挂载；《[HTTP]()》的[第6.4章]()描述了内容。
 
 Receipt of an invalid sequence of frames MUST be treated as a connection error of type H3_FRAME_UNEXPECTED. In particular, a DATA frame before any HEADERS frame, or a HEADERS or DATA frame after the trailing HEADERS frame, is considered invalid. Other frame types, especially unknown frame types, might be permitted subject to their own rules; see Section 9.
 
@@ -71,7 +71,7 @@ Transfer codings (see Section 7 of [HTTP/1.1]) are not defined for HTTP/3; the T
 A response MAY consist of multiple messages when and only when one or more interim responses (1xx; see Section 15.2 of [HTTP]) precede a final response to the same request. Interim responses do not contain content or trailer sections.
 
 当且仅当在某个请求的最终响应前存在一个或多个临时响应（状态码为`1xx`；详见《[HTTP]()》的[第15.2章]()）时，此次响应才**可以**由多条消息组成。
-临时响应并不包含内容和尾部。
+临时响应并不包含内容和挂载。
 
 An HTTP request/response exchange fully consumes a client-initiated bidirectional QUIC stream. After sending a request, a client MUST close the stream for sending. Unless using the CONNECT method (see Section 4.4), clients MUST NOT make stream closure dependent on receiving a response to their request. After sending a final response, the server MUST close the stream for sending. At this point, the QUIC stream is fully closed.
 
