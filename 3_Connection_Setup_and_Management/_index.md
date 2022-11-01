@@ -1,8 +1,6 @@
 ---
-title: "3. 连接设置与管理"
+title: "3. 连接的建立与管理"
 anchor: "3_Connection_Setup_and_Management"
-weight: 300
+weight: 30000
 rank: "h1"
 ---
-
-
