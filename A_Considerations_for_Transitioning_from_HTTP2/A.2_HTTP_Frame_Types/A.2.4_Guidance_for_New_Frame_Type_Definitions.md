@@ -1,5 +1,5 @@
 ---
-title: "A.2.4. 关于如何定义新的帧类型的指引"
+title: "A.2.4. 关于如何定义新的帧类型的指导"
 anchor: "A.2.4_Guidance_for_New_Frame_Type_Definitions"
 weight: 130240
 rank: "h3"
