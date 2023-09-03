@@ -22,7 +22,7 @@ title="图1：单向流的头部" %}}
 {{% /block_ref %}}
 
 本文档定义了两种流类型：控制流（详见[第6.2.1章](#6.2.1_Control_Streams)）和推送流（详见[第6.2.2章](#6.2.2_Push_Streams)）。
-《[QPACK](../RFC9204_Chinese_Simplified)》定义了两种额外的帧类型。
+《[QPACK](../RFC9204_Chinese_Simplified)》定义了两种额外的流类型。
 HTTP/3的扩展还可以定义其他流类型；详见[第9章](#9_Extensions_to_HTTP3)。
 某些流类型是被保留使用的（详见[第6.2.3章](#6.2.3_Reserved_Stream_Types)）。
 
